@@ -12,7 +12,7 @@ Originally used together with a dashboard developed as part of a group project. 
 
 ## 2. Requirements
 
-### 4.1 Functional requirements
+### 2.1 Functional requirements
 
 * As a user, you should be able to leave messages that can be read by others who use the application at the same time.
 * Communication must take place via text in a chat room.
@@ -24,7 +24,7 @@ Originally used together with a dashboard developed as part of a group project. 
 * As a user, you should be able to access the application via both personal computer and tablet.
 * The application should be accessible via hyperlink from the interface for monitoring a hotel's digital sensors. (removed in public version)
 
-### 4.2 Technical requirements
+### 2.2 Technical requirements
 
 * The application will be implemented as a server-side API in the ASP .NET Core framework.
 * SignalR will be used for real-time communication between the client interface and the server-side API.
