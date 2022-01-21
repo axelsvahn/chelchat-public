@@ -1,0 +1,188 @@
+/* Flexbox */
+
+.container-1 {
+	display: flex;
+}
+
+.box-1 {
+	flex: 1;
+	/* makes left column stick */
+	align-self: flex-start;
+	position: sticky;
+	top: 4rem;
+	bottom: 4rem;
+	left: 25%;
+}
+
+.box-2 {
+	flex: 2;
+	margin-right: 2%
+	/* margin: 1% 10% 5% 10%;  only looks nice on large screens, so commented out*/
+}
+
+body {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-family: 'Reem Kufi', sans-serif;
+	font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+li {
+	list-style-type: none;
+}
+
+textarea {
+	resize: none;
+}
+
+h1, p, h2, h3 {
+	color: black;
+	margin: auto;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+/* --messages-- */
+
+.messageFrame {
+	color: black;
+	/* border: 2px solid black; */
+	border-radius: 5px;
+	/* width: 100%; */
+	text-align: center;
+	margin: 2em auto;
+	/* background-color: rgb(250, 250, 241); */
+}
+
+.new-message-form {
+	color: black;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin: 2em auto;
+	width: 50%;
+	text-align: center;
+	background-color: rgb(243, 241, 241);
+}
+
+.message-box {
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 35%;
+	margin: 2em auto;
+	padding: 1em;
+	text-align: center;
+	background-color: white;
+	overflow-wrap: break-word;
+	transition: background-color 0.5s;
+	animation: slide-up1 0.75s ease;
+}
+
+@keyframes slide-up1 {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-up2 {
+	0% {
+		opacity: 0;
+		transform: translateZ(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}
+
+.message-box:hover {
+	background-color: rgb(240, 240, 240);
+}
+
+.message-name-div {
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.message-content-div {
+	text-align: left;
+}
+
+/* .message-hashtag-div {
+	text-align: left;
+	font-size: 1.1rem;
+	color: blue;
+} */
+
+.message-id-div {
+	text-align: right;
+	font-size: 0.9rem;
+}
+
+/* --responses-- */
+
+.response-box {
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 2em auto;
+	padding: 1em;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	animation: slide-up2 1s ease;
+}
+
+.response-name-div {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.response-time-div {
+	text-align: right;
+	font-size: 0.8rem;
+}
+
+.response-content-div {
+	text-align: left;
+	font-size: 0.8rem;
+}
+
+.hashtag-box {
+	text-align: center;
+}
+
+/* --misc */
+
+.chat-btn {
+	margin: 1em auto;
+}
+
+@media only screen and (max-width: 768px) {
+	.container-1 {
+		display: flex;
+		flex-direction: column;
+	}
+	.box-1 {
+		flex: 1;
+		align-self: auto;
+		position: static;
+		top: auto;
+		bottom: auto;
+	}
+	.new-message-form {
+		width: 80%;
+		align-self: normal;
+	}
+	.message-box {
+		width: 80%;
+	}
+}
