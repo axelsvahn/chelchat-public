@@ -1,6 +1,6 @@
 # ChelChat
 
-Twitter-style chat application built with .NET 5, React and real-time communication using SignalR.
+Twitter-style chat application built with .NET 5 and React. Real-time communication using SignalR.
 
 ![chel-chat](chel-chat.png)
 
